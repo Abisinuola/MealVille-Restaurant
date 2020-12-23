@@ -58,6 +58,10 @@ font-family: "Brush Script MT", "Brush Script Std", cursive;
 	color:black;
 }
 
+.navbar .navbar-nav  li a{
+}
+
+
 
 .header-button .btn{
     
@@ -118,7 +122,7 @@ color:black;
 	border-radius: 0px;
   }
   
-  .form-control{
+.form-control{
 	width: 300px;
 	height: 35px;
 	background: transparent;
@@ -128,7 +132,7 @@ color:black;
 	color: #fff;
   }
   
-  alert{
+.alert{
 	width: 100%;
 	height: 200px;
 	-moz-text-size-adjust: 14;

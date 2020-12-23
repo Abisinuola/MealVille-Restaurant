@@ -112,22 +112,22 @@ require "header.php";
   <div class="row">
   
   <div class ="col-sm-3">
-    <button type="button" onclick="linkedin.com/in/mercy-kalu-576b71198" class="btn btn-outline-dark btn-block btn-lg"><img src="1.jpg" class="img-fluid rounded"></button><br>
+    <a href="https://github.com/belrah"><img src="img/Mercy.png" class="img-fluid rounded hoverable"></a><br><br>
     <h5 class ="container"><i><b>Mercy KALU</b></i></h5>
   </div>
 
   <div class ="col-sm-3">
-    <a href="linkedin.com/in/ogungbenro-oluwadamilola-51979bb9"><img src="1.jpg" class="img-fluid rounded hoverable"></a><br><br>
+    <a href="linkedin.com/in/ogungbenro-oluwadamilola-51979bb9"><img src="img/Dami.jpg" class="img-fluid rounded hoverable"></a><br><br>
     <h5 class ="container"><i><b>Damilola OGUNGBENRO</b></i></h5>
   </div>
 
   <div class ="col-sm-3">
-    <a href="linkedin.com/in/akpangmonica"><img src="1.jpg" class="img-fluid rounded hoverable"></a><br><br>
+    <a href="linkedin.com/in/akpangmonica"><img src="img/Monica.jpg" class="img-fluid rounded hoverable"></a><br><br>
     <h5 class ="container"><i><b>Monica AKGPANG</b></i></h5>
   </div>
   
   <div class ="col-sm-3">
-    <a href="linkedin.com/in/abisola-adeniji"><img src="1.jpg" class="img-fluid rounded hoverable"></a><br><br>
+    <a href="linkedin.com/in/abisola-adeniji"><img src="img/Abisola.jpg" class="img-fluid rounded hoverable"></a><br><br>
     <h5 class ="container"><i><b>Abisola ADENIJI</b></i></h5>
   </div>
 
@@ -146,7 +146,7 @@ require "header.php";
        
     <div class="col-sm-4">
       <?php
-      $name = $email = $message = "";
+      $name = $email = $subject = $message = "";
         
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = test_input($_POST["name"]);
@@ -184,10 +184,9 @@ require "header.php";
           $headers = "From:" . $from;
           $headers2 = "From:" . $to;
           mail($to,$subject,$message,$headers);
-          mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-          echo '<script>alert("Thank you for reaching out to MealVille Resturant, we will contact you shortly")</script>';
+          mail($from,$subject2,$message2,$headers2); 
 
-          // You can also use header('Location: thank_you.php'); to redirect to another page.
+          echo '<script>alert("Thank you for reaching out to MealVille Resturant, we will contact you shortly")</script>';
           }
         ?>
     </div>
@@ -253,14 +252,13 @@ require "header.php";
               </tbody>
               </table>";
             }
-        //close connection
    mysqli_close($conn);
     }
     ?>
     </div>
     </div>
 </section>
-<!--end of main page map section-->
+
 
 <?php
 require "footer.php";
